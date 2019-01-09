@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bases du SQL( Base de données )</title>
+</head>
+
+<style>
+    #lien , #lien1 {
+        margin-left: 760px;
+    }
+    #joke {
+        margin-left: 611px;
+        color: red;
+        font-size: x-large;
+    }
+    h1, h3 {
+        text-align: center;
+    }
+
+    form {
+        text-align: center;
+        margin-bottom: 84px;
+    }
+</style>
+<body>
+
+    <h1>SQL : Les bases de données</h1>
+
+    <br> <a href="index.php" id="lien">Clic to see all students only</a>
+    <br> <a href="mug.php" id="lien1">Clic to see all mugs only</a>
+    <br> <a href="joke.html" id="joke">Clic to delete all information in the world</a>
+
+
+    <h3>Ajouter un élève :</h3>
+
+        <form method="get" name="eleves" id="eleves" action="add.php">
+
+            <label>
+                    Nom :
+                <input type="text" name="nom" id="nom"/>
+
+            </label>
+            <label>
+                    Prenom :
+                <input type="text" name="prenom" id="prenom"/>
+            </label>
+            <label>
+                    Age :
+                <input type="number" name="age" id="age"/>
+            </label>
+
+
+
+        <button type="submit" name="btn" id="btn">Clic</button>
+        </form>
+
+    <hr>
+
+<h3>Modifier les infos d'un élève :</h3>
+
+    <form method="get" name="change" id="change" action="modify.php">
+
+        <label>
+            Nom :
+            <input type="text" name="m_nom" id="m_nom"/>
+        </label>
+        <label>Prenom :
+            <input type="text" name="m_prenom" id="m_prenom" />
+        </label>
+        <label>Age :
+            <input type="number" name="m_age" id="m_age" />
+        </label>
+        <label>
+            ID :
+            <input type="number" name="modif_id" id="modif_id"/>
+        </label>
+
+    <button type="submit" name="btn1" id="btn1">Clic</button>
+
+    </form>
+
+
+
+    <hr>
+
+<h3>Supprimer un élève :</h3>
+
+    <form method="get" name="del" action="delete.php">
+
+        <label>
+            ID :
+            <input type="number" name="delete" id="delete"/>
+        </label>
+
+        <button type="submit" name="btn2" id="btn2">Clic</button>
+
+
+    </form>
+
+<hr>
+
+<h3>Ajouter un mug :</h3>
+
+<form method="get" name="lesmugs" action="mug.php">
+
+    <label>
+        Description :
+        <input type="text" name="lesmugs" id="lesmugs"/>
+    </label>
+
+    <button type="submit" name="btn3" id="btn3">Clic</button>
+
+
+
+</form>
+
+    <hr>
+
+    <h3>Modifier un mug : </h3>
+
+<form action="change_mug.php" method="get" name="change">
+
+    <label>
+        Description :
+        <input type="text" name="changer" id="changer"/>
+    </label>
+
+    <label>
+        ID :
+        <input type="text" name="idc" id="idc"/>
+    </label>
+
+
+<button type="submit" id="btn4" name="btn4">Clic</button>
+</form>
+
+<hr>
+
+<h3>Associer un mug à un élève</h3>
+
+<form action="associate.php" method="get" name="asso">
+
+    <label>
+        ID élève :
+        <input type="number" name="asso_eleve" id="asso_eleve"/>
+
+    </label>
+    <label>
+        ID mug :
+        <input type="number" name="asso_mug" id="asso_mug">
+    </label>
+
+    <button type="submit" name="btn5" id="btn5">Clic</button>
+
+</form>
+
+<hr>
+<h3>Eleve associé à son mug :</h3>
+<form action="laliste.php" method="get" name="laliste">
+
+    <label>
+        ID Eleve :
+        <input type="number" name="laliste" id="laliste"/>
+    </label>
+    <button type="submit" name="btn6" id="btn6">Clic</button>
+
+
+
+</form>
+
+
+</body>
+</html>
